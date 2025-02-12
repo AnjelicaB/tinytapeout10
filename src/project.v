@@ -42,7 +42,7 @@ module dev_by_five (
   output wire       out,
   input  wire       clk,  
   input  wire       rst_n 
-)
+);
   reg        [2:0] state;
   reg        [2:0] next_state;
   localparam [2:0] mod0 = 3'b000;
