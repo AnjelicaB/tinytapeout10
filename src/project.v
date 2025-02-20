@@ -39,7 +39,7 @@ endmodule
 
 module dev_by_five (
   input  wire       in,
-  output wire       out,
+  output reg        out,
   input  wire       clk,  
   input  wire       rst_n 
 );
