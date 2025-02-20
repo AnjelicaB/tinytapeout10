@@ -15,6 +15,7 @@ module tt_um_AnjelicaB_Top (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 );
+  '0
 
   // All output pins must be assigned. If not used, assign to 0.
   assign uio_out = 0;
@@ -30,6 +31,8 @@ module tt_um_AnjelicaB_Top (
     .clk(clk),
     .rst_n(rst_n)
   );
+
+  assign uo_out = out;
 
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, in[7:1], out[7:1], uio_in, uio_out, uio_oe, 1'b0};
