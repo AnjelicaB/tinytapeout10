@@ -16,6 +16,10 @@ module tt_um_AnjelicaB_Top (
     input  wire       rst_n     // reset_n - low to reset
 );
 
+  // All output pins must be assigned. If not used, assign to 0.
+  assign uio_out = 0;
+  assign uio_oe  = 0;
+
   wire [7:0] in = ui_in;
   wire [7:0] out;
 
