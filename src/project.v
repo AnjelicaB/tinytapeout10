@@ -17,11 +17,13 @@ module tt_um_AnjelicaB_Top (
 );
 
   // All output pins must be assigned. If not used, assign to 0.
-  assign uio_out = '0;
-  assign uio_oe  = '0;
 
   wire [7:0] in = ui_in;
   wire [7:0] out;
+
+  assign out[7:1] = '0;
+  assign uio_out = '0;
+  assign uio_oe  = '0;
 
   // Instantiate the design
   dev_by_five dev_by_five_inst (
@@ -34,7 +36,7 @@ module tt_um_AnjelicaB_Top (
   assign uo_out = out;
 
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, in[7:1], out[7:1], uio_in, uio_out, uio_oe, 1'b0};
+  wire _unused = &{ena, in[7:1], uio_in, uio_out, uio_oe, 1'b0};
 
 endmodule
 
